@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perry's Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("099fb47RuSe-3GCOW");
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="menu-bars" class="fas fa-bars"></div>
+    <!-- Header Start -->
+    <header>
+      <a href="#" class="logo"><span>Perry</span> Tsai</a>
+      <nav class="navbar">
+        <a href="#home" class="nav-link">home</a>
+        <a href="#about" class="nav-link">about</a>
+        <a href="#skills" class="nav-link">skill</a>
+        <a href="#portfolio" class="nav-link">portfolio</a>
+        <a href="#contact" class="nav-link">contact</a>
+      </nav>
+    </header>
+    <!-- Header End-->
+
+    <!-- homesection start -->
+    <section class="home" id="home">
+      <div class="content">
+        <span class="hi">Hi there !</span>
+        <h3>I am <span>Perry Tsai</span></h3>
+        <p class="info">I am a frontend developer</p>
+        <p class="text">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, sunt
+          temporibus nisi sed dolorum obcaecati eligendi ipsum pariatur ut porro
+          placeat repellendus tempora fugiat! Ullam, dolorem. Ipsa non animi
+          veritatis!
+        </p>
+        <a href="#about" class="btn">about me</a>
+      </div>
+      <div class="image">
+        <img src="/portfolio/images/Perry-Pic.jpg" alt="" />
+      </div>
+    </section>
+    <!-- homesection end -->
+
+    <!-- about section starts -->
+    <section class="about" id="about">
+      <h1 class="heading">about <span>me</span></h1>
+      <div class="row-1">
+        <div class="image">
+          <img src="/portfolio/images/PerryPic2.jpg" alt="" />
+        </div>
+        <div class="content">
+          <h3>my name is Perry and i am a front-end developer</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            modi repellat soluta iure harum alias officia blanditiis,
+            reprehenderit vitae deserunt! Temporibus porro harum quasi quisquam
+            nihil, dolorem dignissimos sunt odit.
+          </p>
+          <div class="box-containter">
+            <div class="box">
+              <p><span>age:</span>21</p>
+              <p><span>gender:</span>male</p>
+              <p><span>language:</span>English, Chinese</p>
+            </div>
+            <div class="box">
+              <p><span>phone:</span>0968647718</p>
+              <p class="mail"><span>email:</span>perry20990823@gmail.com</p>
+              <p><span>country:</span>taiwan</p>
+            </div>
+          </div>
+          <a
+            target="_blank"
+            rel="noopener no-referrer"
+            href="mypdf.html"
+            class="btn"
+            >View CV</a
+          >
+
+          <a href="#contact" class="btn">contact me</a>
+        </div>
+      </div>
+      <h1 class="heading" id="skills"><span>my</span>skills</h1>
+      <div class="row-2">
+        <div class="skills">
+          <div class="progress">
+            <img src="images/html-5.png" alt="" />
+            <h3>html 5</h3>
+            <div class="bar"><span></span></div>
+          </div>
+          <div class="progress">
+            <img src="images/css-3.png" alt="" />
+            <h3>css</h3>
+            <div class="bar"><span></span></div>
+          </div>
+          <div class="progress">
+            <!-- Java Script -->
+            <img src="images/js.png" alt="" />
+            <h3>java script</h3>
+
+            <div class="bar"><span></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- about section ends -->
+    <!-- portfolio section starts -->
+    <section class="portfolio" id="portfolio">
+      <h1 class="heading"><span>my</span>portfolio</h1>
+
+      <div class="box-container">
+        <div class="box">
+          <img src="/portfolio/images/myPortfolio.png" alt="" />
+          <h3>project 01</h3>
+          <div class="icons">
+            <a href="#" class="fas fa-link"></a>
+
+            <a href="#" class="fas fa-search"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- portfolion section ends -->
+
+    <!-- contact section starts -->
+    <section class="contact" id="contact">
+      <h1 class="heading">contact <span>me</span></h1>
+      <div class="icons-container">
+        <div class="icons">
+          <i class="fas fa-envelope"></i>
+          <h3>my email</h3>
+          <p class="mail">perry20990823@gmail.com</p>
+        </div>
+        <div class="icons">
+          <i class="fas fa-phone"></i>
+          <h3>my number</h3>
+          <p>0968-647-718</p>
+        </div>
+        <div class="icons">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>my address</h3>
+          <p>新北市汐止區</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <form onsubmit="">
+          <input
+            type="text"
+            id="fullName"
+            placeholder="name"
+            required
+            class="box"
+          />
+          <input
+            id="email_id"
+            type="email"
+            placeholder="email"
+            required
+            class="box"
+          />
+          <input type="number" placeholder="number" required class="box" />
+
+          <textarea
+            name=""
+            placeholder="message"
+            id="message"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <button onclick="sendMail()" class="btn">
+            Send Message Via Email
+          </button>
+
+          <!-- <input type="submit" class="btn" value="send message via email" /> -->
+        </form>
+
+        <iframe
+          class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d451.7454087544014!2d121.63123767823178!3d25.069234017713313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d534b84a8f609%3A0xa019f2bebdea0a0d!2zWW91QmlrZeW-rueskeWWrui7iiAyLjA6IOmHkem-jeWFrOWckg!5e0!3m2!1szh-TW!2stw!4v1686924392633!5m2!1szh-TW!2stw"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+    <!-- contact section ends -->
+
+    <!-- footer  -->
+    <footer>created by <span>PerryTsai </span> &copy;</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
