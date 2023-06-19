@@ -10,15 +10,6 @@
     />
 
     <link rel="stylesheet" href="style.css" />
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("099fb47RuSe-3GCOW");
-      })();
-    </script>
   </head>
   <body>
     <div id="menu-bars" class="fas fa-bars"></div>
@@ -188,9 +179,11 @@
             cols="30"
             rows="10"
           ></textarea>
-          <button onclick="sendMail()" class="btn">
+          <button id="sendEmailBtn" class="btn">Send Message Via Email</button>
+
+          <!-- <button onclick="sendMail(e)" class="btn">
             Send Message Via Email
-          </button>
+          </button> -->
 
           <!-- <input type="submit" class="btn" value="send message via email" /> -->
         </form>
@@ -209,6 +202,15 @@
     <!-- footer  -->
     <footer>created by <span>PerryTsai </span> &copy;</footer>
 
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("099fb47RuSe-3GCOW");
+      })();
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
