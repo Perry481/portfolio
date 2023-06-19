@@ -37,15 +37,32 @@ navBar.addEventListener("mouseover", hoverAction.bind(0.3));
 navBar.addEventListener("mouseout", hoverAction.bind(1));
 
 //email section
-const sendMail = function () {
+// const sendMail = function (e) {
+//   e.preventDefault();
+//   const params = {
+//     from_name: document.getElementById("fullName").value,
+//     email_id: document.getElementById("email_id").value,
+//     message: document.getElementById("message").value,
+//   };
+//   emailjs
+//     .send("service_azba5q7", "template_8qylpig", params)
+//     .then(function (res) {
+//       alert("Success! Thank You For Contacting Me!" + res.status);
+//     });
+// };
+
+document.getElementById("sendEmailBtn").addEventListener("click", function (e) {
+  e.preventDefault();
+
   const params = {
     from_name: document.getElementById("fullName").value,
     email_id: document.getElementById("email_id").value,
     message: document.getElementById("message").value,
   };
+
   emailjs
     .send("service_azba5q7", "template_8qylpig", params)
     .then(function (res) {
       alert("Success! Thank You For Contacting Me!" + res.status);
     });
-};
+});
